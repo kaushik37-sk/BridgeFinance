@@ -2,160 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BridgeFinance | Empowering Immigrant Families</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f7f7f7;
-      color: #333;
-    }
-    header {
-      background-color: #1e4d2b;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      background: #163b20;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 1rem;
-      display: inline-block;
-    }
-    nav a:hover {
-      background: #145c2a;
-    }
-    main {
-      padding: 2rem;
-    }
-    section {
-      margin-bottom: 3rem;
-    }
-    .language-selector {
-      margin: 1rem 0;
-    }
-    footer {
-      background: #1e4d2b;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
-    .button {
-      background-color: #1e4d2b;
-      color: white;
-      padding: 0.5rem 1rem;
-      text-decoration: none;
-      border-radius: 5px;
-      display: inline-block;
-      margin-top: 1rem;
-    }
-  </style>
-  <script>
-    function changeLanguage(lang) {
-      const en = document.querySelectorAll('.lang-en');
-      const es = document.querySelectorAll('.lang-es');
-      const hi = document.querySelectorAll('.lang-hi');
-
-      [en, es, hi].forEach(group => group.forEach(el => el.style.display = 'none'));
-
-      const selected = document.querySelectorAll(`.lang-${lang}`);
-      selected.forEach(el => el.style.display = 'block');
-    }
-  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BridgeFinance - Microloan Platform</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <h1>BridgeFinance</h1>
-    <p>Empowering Immigrant Families Through Financial Literacy</p>
+    <p>Connecting Underbanked Entrepreneurs with Microloan Opportunities</p>
   </header>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#workshops">Workshops</a>
-    <a href="#resources">Resources</a>
-    <a href="#contact">Contact</a>
-  </nav>
+
   <main>
-    <div class="language-selector">
-      <label for="language">Select Language: </label>
-      <select id="language" onchange="changeLanguage(this.value)">
-        <option value="en">English</option>
-        <option value="es">Español</option>
-        <option value="hi">हिन्दी</option>
-      </select>
-    </div>
+    <section class="loan-form">
+      <h2>Request a Microloan</h2>
+      <form id="loanRequestForm">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" required />
 
-    <section id="about">
-      <div class="lang-en">
-        <h2>About BridgeFinance</h2>
-        <p>BridgeFinance helps immigrant families understand and navigate the U.S. financial system with culturally sensitive resources and workshops.</p>
-      </div>
-      <div class="lang-es" style="display:none">
-        <h2>Sobre BridgeFinance</h2>
-        <p>BridgeFinance ayuda a las familias inmigrantes a entender y navegar el sistema financiero de EE.UU. con recursos y talleres culturalmente sensibles.</p>
-      </div>
-      <div class="lang-hi" style="display:none">
-        <h2>BridgeFinance के बारे में</h2>
-        <p>BridgeFinance अप्रवासी परिवारों को अमेरिकी वित्तीय प्रणाली को समझने और नेविगेट करने में मदद करता है।</p>
-      </div>
+        <label for="amount">Loan Amount ($):</label>
+        <input type="number" id="amount" required />
+
+        <label for="purpose">Loan Purpose:</label>
+        <textarea id="purpose" rows="3" required></textarea>
+
+        <button type="submit">Submit Request</button>
+      </form>
     </section>
 
-    <section id="workshops">
-      <div class="lang-en">
-        <h2>Workshops</h2>
-        <p>We offer monthly in-person and virtual workshops on banking, credit, budgeting, taxes, and more.</p>
-      </div>
-      <div class="lang-es" style="display:none">
-        <h2>Talleres</h2>
-        <p>Ofrecemos talleres mensuales presenciales y virtuales sobre banca, crédito, presupuesto, impuestos y más.</p>
-      </div>
-      <div class="lang-hi" style="display:none">
-        <h2>कार्यशालाएँ</h2>
-        <p>हम बैंकिंग, क्रेडिट, बजट, कर और अन्य विषयों पर मासिक कार्यशालाएं प्रदान करते हैं।</p>
-      </div>
-    </section>
-
-    <section id="resources">
-      <div class="lang-en">
-        <h2>Resources</h2>
-        <p>Download our free multilingual guidebooks and access useful links to trusted services.</p>
-        <a href="#" class="button">Download Guidebook</a>
-      </div>
-      <div class="lang-es" style="display:none">
-        <h2>Recursos</h2>
-        <p>Descargue nuestras guías multilingües gratuitas y acceda a enlaces útiles a servicios confiables.</p>
-        <a href="#" class="button">Descargar Guía</a>
-      </div>
-      <div class="lang-hi" style="display:none">
-        <h2>संसाधन</h2>
-        <p>हमारी बहुभाषी मार्गदर्शिकाएँ मुफ्त डाउनलोड करें और विश्वसनीय सेवाओं के लिंक तक पहुंचें।</p>
-        <a href="#" class="button">गाइड डाउनलोड करें</a>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="lang-en">
-        <h2>Contact Us</h2>
-        <p>Email us at: <a href="mailto:contact@bridgefinance.org">contact@bridgefinance.org</a></p>
-      </div>
-      <div class="lang-es" style="display:none">
-        <h2>Contáctenos</h2>
-        <p>Envíenos un correo electrónico a: <a href="mailto:contact@bridgefinance.org">contact@bridgefinance.org</a></p>
-      </div>
-      <div class="lang-hi" style="display:none">
-        <h2>संपर्क करें</h2>
-        <p>हमें ईमेल करें: <a href="mailto:contact@bridgefinance.org">contact@bridgefinance.org</a></p>
-      </div>
+    <section class="loan-status">
+      <h2>Loan Request Status</h2>
+      <div id="loanResult"></div>
     </section>
   </main>
+
   <footer>
-    <p>&copy; 2025 BridgeFinance. All rights reserved.</p>
+    <p>&copy; 2025 BridgeFinance | Empowering Entrepreneurs</p>
   </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
+
